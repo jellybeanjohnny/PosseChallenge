@@ -11,10 +11,13 @@
 		C931AD8A1E9BDA60009F5C8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931AD891E9BDA60009F5C8B /* AppDelegate.swift */; };
 		C931AD911E9BDA60009F5C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C931AD901E9BDA60009F5C8B /* Assets.xcassets */; };
 		C931AD9D1E9BDC0B009F5C8B /* Progammer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931AD9C1E9BDC0B009F5C8B /* Progammer.swift */; };
-		C931AD9F1E9BDC5B009F5C8B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931AD9E1E9BDC5B009F5C8B /* Service.swift */; };
 		C931ADA11E9BDC83009F5C8B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931ADA01E9BDC83009F5C8B /* Location.swift */; };
 		C931ADA31E9BDD44009F5C8B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931ADA21E9BDD44009F5C8B /* Store.swift */; };
 		C931ADA61E9BDE03009F5C8B /* posse_challenge.json in Resources */ = {isa = PBXBuildFile; fileRef = C931ADA51E9BDE03009F5C8B /* posse_challenge.json */; };
+		C9D8AB991E9BF67F002577F1 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8AB981E9BF67F002577F1 /* DisplayViewController.swift */; };
+		C9D8AB9B1E9BFC29002577F1 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8AB9A1E9BFC29002577F1 /* JSONParser.swift */; };
+		C9D8AB9D1E9C02B9002577F1 /* LocationCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8AB9C1E9C02B9002577F1 /* LocationCollectionReusableView.swift */; };
+		C9D8AB9F1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8AB9E1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +29,13 @@
 		C931AD901E9BDA60009F5C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C931AD951E9BDA60009F5C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C931AD9C1E9BDC0B009F5C8B /* Progammer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progammer.swift; sourceTree = "<group>"; };
-		C931AD9E1E9BDC5B009F5C8B /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C931ADA01E9BDC83009F5C8B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C931ADA21E9BDD44009F5C8B /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C931ADA51E9BDE03009F5C8B /* posse_challenge.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posse_challenge.json; sourceTree = "<group>"; };
+		C9D8AB981E9BF67F002577F1 /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		C9D8AB9A1E9BFC29002577F1 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		C9D8AB9C1E9C02B9002577F1 /* LocationCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCollectionReusableView.swift; sourceTree = "<group>"; };
+		C9D8AB9E1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +79,10 @@
 		C931AD881E9BDA60009F5C8B /* Posse */ = {
 			isa = PBXGroup;
 			children = (
+				C9D8AB971E9BF657002577F1 /* ViewController */,
 				C931ADA41E9BDDF0009F5C8B /* Supporting Files */,
 				C931AD9B1E9BDBF2009F5C8B /* Models */,
-				C931ADA21E9BDD44009F5C8B /* Store.swift */,
+				C9D8AB961E9BE945002577F1 /* Data Store */,
 				C931AD891E9BDA60009F5C8B /* AppDelegate.swift */,
 				C931AD901E9BDA60009F5C8B /* Assets.xcassets */,
 			);
@@ -86,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				C931AD9C1E9BDC0B009F5C8B /* Progammer.swift */,
-				C931AD9E1E9BDC5B009F5C8B /* Service.swift */,
 				C931ADA01E9BDC83009F5C8B /* Location.swift */,
 			);
 			name = Models;
@@ -99,6 +105,25 @@
 				C931AD951E9BDA60009F5C8B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9D8AB961E9BE945002577F1 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				C931ADA21E9BDD44009F5C8B /* Store.swift */,
+				C9D8AB9A1E9BFC29002577F1 /* JSONParser.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		C9D8AB971E9BF657002577F1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C9D8AB981E9BF67F002577F1 /* DisplayViewController.swift */,
+				C9D8AB9C1E9C02B9002577F1 /* LocationCollectionReusableView.swift */,
+				C9D8AB9E1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		D1CCFFB51AA4539013CC8E58 /* Pods */ = {
@@ -234,10 +259,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C931ADA31E9BDD44009F5C8B /* Store.swift in Sources */,
+				C9D8AB991E9BF67F002577F1 /* DisplayViewController.swift in Sources */,
+				C9D8AB9D1E9C02B9002577F1 /* LocationCollectionReusableView.swift in Sources */,
+				C9D8AB9B1E9BFC29002577F1 /* JSONParser.swift in Sources */,
+				C9D8AB9F1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift in Sources */,
 				C931AD9D1E9BDC0B009F5C8B /* Progammer.swift in Sources */,
 				C931AD8A1E9BDA60009F5C8B /* AppDelegate.swift in Sources */,
 				C931ADA11E9BDC83009F5C8B /* Location.swift in Sources */,
-				C931AD9F1E9BDC5B009F5C8B /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +412,7 @@
 				C931AD9A1E9BDA60009F5C8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

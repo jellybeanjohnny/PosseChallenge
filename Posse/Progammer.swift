@@ -13,6 +13,7 @@ struct Programmer {
     let favoriteColor: String
     let age: Int
     let weight: Float
-    let phoneNumber: Int
+    let phoneNumber: String
     let isArtist: Bool
+    let platform: String
 }

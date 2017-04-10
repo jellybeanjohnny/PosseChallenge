@@ -27,6 +27,7 @@ enum StoreError: LocalizedError {
 struct Store {
     //MARK: - Public
     func load(success: @escaping ([Location]) -> Void, failure: @escaping (Error) -> Void)  {
+        let parser = JSONParser()
         DispatchQueue.global().async {
             guard let data = self.loadJSONData() else {
                 DispatchQueue.main.async {
@@ -35,7 +36,7 @@ struct Store {
                 return
             }
            
-            guard let locations = self.parseJSON(usingData: data) else {
+            guard let locations = parser.parseJSON(usingData: data) else {
                 DispatchQueue.main.async {
                     failure(StoreError.JSONParsingError)
                 }
@@ -48,12 +49,6 @@ struct Store {
     }
     
     //MARK: - Private
-    fileprivate func parseJSON(usingData: Data) -> [Location]? {
-        let locations: [Location] = []
-        return locations
-    }
-    
-    
     fileprivate func loadJSONData() -> Data? {
         guard let fileURL = Bundle.main.url(forResource: "posse_challenge", withExtension: ".json") else {
             return nil

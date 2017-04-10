@@ -11,8 +11,5 @@ import Foundation
 struct Location {
     let locality: String
     let region: String
-    let postalCode: String
-    let country: String
-    let id: String
-    let services: [Service]
+    let programmers: [Programmer]
 }

@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let store = Store()
-        store.load(success: { (locations) in
-            print(locations)
-        }) { (error) in
-            print(error.localizedDescription)
-        }
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let rootViewController = DisplayViewController()
+        
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
         
         return true
     }
