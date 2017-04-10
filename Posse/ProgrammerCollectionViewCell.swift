@@ -9,8 +9,19 @@
 import UIKit
 
 class ProgrammerCollectionViewCell: UICollectionViewCell {
+    
+    let textLabel = UILabel()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        backgroundColor = UIColor.orange
+        backgroundColor = UIColor.lightGray
+        addSubview(textLabel)
+        setupConstraints()
+    }
+    
+    func setupConstraints() {
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        textLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
     }
 }

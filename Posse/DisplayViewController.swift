@@ -38,7 +38,6 @@ class DisplayViewController: UIViewController {
         store.load(success: { (locations) in
             
             self.locations = locations
-            print(locations.count)
             self.collectionView.reloadData()
         }) { (error) in
             print(error.localizedDescription)
@@ -56,7 +55,7 @@ class DisplayViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.contentInset = UIEdgeInsets(top: cellSpacing, left: cellSpacing, bottom: cellSpacing, right: cellSpacing)
-        collectionView.backgroundColor = UIColor.blue
+        collectionView.backgroundColor = UIColor.black
         
         registerCells()
         
@@ -106,7 +105,11 @@ extension DisplayViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier.programmerCell, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier.programmerCell, for: indexPath) as? ProgrammerCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        let programmer = locations[indexPath.section].programmers[indexPath.row]
+        cell.textLabel.text = programmer.name
 
         return cell
     }
@@ -115,6 +118,17 @@ extension DisplayViewController: UICollectionViewDataSource {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: CellIdentifier.locationHeader, for: indexPath) as? LocationCollectionReusableView else {
             return UICollectionReusableView()
         }
+        
+        var headerImage: UIImage?
+        switch indexPath.section {
+        case 0: headerImage = UIImage(named: "nyc.jpg")
+        case 1: headerImage = UIImage(named: "chicago.jpg")
+        case 2: headerImage = UIImage(named: "oakland.jpg")
+        default: headerImage = UIImage(named: "nyc.jpg")
+        }
+        
+        header.backgroundImageView.image = headerImage
+        
         let location = locations[indexPath.section]
         header.textLabel.text = "\(location.locality), \(location.region)"
         

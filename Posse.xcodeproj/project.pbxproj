@@ -18,6 +18,10 @@
 		C9D8AB9B1E9BFC29002577F1 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8AB9A1E9BFC29002577F1 /* JSONParser.swift */; };
 		C9D8AB9D1E9C02B9002577F1 /* LocationCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8AB9C1E9C02B9002577F1 /* LocationCollectionReusableView.swift */; };
 		C9D8AB9F1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8AB9E1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift */; };
+		C9D8ABA11E9C190A002577F1 /* nyc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABA01E9C190A002577F1 /* nyc.jpg */; };
+		C9D8ABA71E9C1BD7002577F1 /* LemonMilk.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABA61E9C1BD7002577F1 /* LemonMilk.otf */; };
+		C9D8ABAA1E9C1DE4002577F1 /* oakland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABA81E9C1DE4002577F1 /* oakland.jpg */; };
+		C9D8ABAB1E9C1DE4002577F1 /* chicago.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABA91E9C1DE4002577F1 /* chicago.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		C9D8AB9A1E9BFC29002577F1 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		C9D8AB9C1E9C02B9002577F1 /* LocationCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCollectionReusableView.swift; sourceTree = "<group>"; };
 		C9D8AB9E1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammerCollectionViewCell.swift; sourceTree = "<group>"; };
+		C9D8ABA01E9C190A002577F1 /* nyc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nyc.jpg; sourceTree = "<group>"; };
+		C9D8ABA61E9C1BD7002577F1 /* LemonMilk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilk.otf; sourceTree = "<group>"; };
+		C9D8ABA81E9C1DE4002577F1 /* oakland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oakland.jpg; sourceTree = "<group>"; };
+		C9D8ABA91E9C1DE4002577F1 /* chicago.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicago.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,8 @@
 		C931ADA41E9BDDF0009F5C8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9D8ABA31E9C1BB8002577F1 /* Fonts */,
+				C9D8ABA21E9C1BAF002577F1 /* Images */,
 				C931ADA51E9BDE03009F5C8B /* posse_challenge.json */,
 				C931AD951E9BDA60009F5C8B /* Info.plist */,
 			);
@@ -124,6 +134,24 @@
 				C9D8AB9E1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C9D8ABA21E9C1BAF002577F1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C9D8ABA81E9C1DE4002577F1 /* oakland.jpg */,
+				C9D8ABA91E9C1DE4002577F1 /* chicago.jpg */,
+				C9D8ABA01E9C190A002577F1 /* nyc.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C9D8ABA31E9C1BB8002577F1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C9D8ABA61E9C1BD7002577F1 /* LemonMilk.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		D1CCFFB51AA4539013CC8E58 /* Pods */ = {
@@ -198,8 +226,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D8ABA11E9C190A002577F1 /* nyc.jpg in Resources */,
 				C931ADA61E9BDE03009F5C8B /* posse_challenge.json in Resources */,
+				C9D8ABA71E9C1BD7002577F1 /* LemonMilk.otf in Resources */,
 				C931AD911E9BDA60009F5C8B /* Assets.xcassets in Resources */,
+				C9D8ABAB1E9C1DE4002577F1 /* chicago.jpg in Resources */,
+				C9D8ABAA1E9C1DE4002577F1 /* oakland.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
