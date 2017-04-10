@@ -11,6 +11,13 @@ import UIKit
 class DisplayViewController: UIViewController {
 
     var locations: [Location] = []
+    
+    let headerImages = [
+        UIImage(named: "nyc.jpg"),
+        UIImage(named: "chicago.jpg"),
+        UIImage(named: "oakland.jpg")
+    ]
+    
     var collectionView: UICollectionView!
     
     // Cell & Column Spacing
@@ -25,7 +32,6 @@ class DisplayViewController: UIViewController {
         view.backgroundColor = UIColor.white
         setupCollectionView()
         loadData()
-        
     }
     
     struct CellIdentifier {
@@ -50,6 +56,7 @@ class DisplayViewController: UIViewController {
         flowLayout.headerReferenceSize = calculateHeaderSize()
         flowLayout.minimumLineSpacing = cellSpacing
         flowLayout.minimumInteritemSpacing = cellSpacing
+        
         
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
         collectionView.delegate = self
@@ -105,12 +112,35 @@ extension DisplayViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier.programmerCell, for: indexPath) as? ProgrammerCollectionViewCell else {
+        guard var cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier.programmerCell, for: indexPath) as? ProgrammerCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let programmer = locations[indexPath.section].programmers[indexPath.row]
-        cell.textLabel.text = programmer.name
+    
+        cell = configured(cell: cell, forItemAtIndexPath: indexPath)
 
+        return cell
+    }
+    
+    func configured(cell: ProgrammerCollectionViewCell, forItemAtIndexPath indexPath: IndexPath) -> ProgrammerCollectionViewCell {
+        let programmer = locations[indexPath.section].programmers[indexPath.row]
+        
+        // Set the appropriate platform image
+        if programmer.platform == "iOS" {
+            cell.platformImageView.image = UIImage(named: "iOS")
+        } else if programmer.platform == "Android" {
+            cell.platformImageView.image = UIImage(named: "android")
+        } else if programmer.platform == "Ruby" {
+            cell.platformImageView.image = UIImage(named: "ruby")
+        }
+        
+        cell.nameLabel.text = programmer.name
+        cell.ageLabel.text = "\(programmer.age) years old"
+        cell.weightLabel.text = "\(programmer.weight) lbs"
+        cell.artistLabel.text = programmer.isArtist ? "I can draw stuff" : "I can't draw stuff"
+        cell.favoriteColorLabel.text = "I love \(programmer.favoriteColor)"
+        cell.phoneLabel.text = programmer.phoneNumber.phoneNumberFormat
+        
+        
         return cell
     }
 
@@ -119,15 +149,7 @@ extension DisplayViewController: UICollectionViewDataSource {
             return UICollectionReusableView()
         }
         
-        var headerImage: UIImage?
-        switch indexPath.section {
-        case 0: headerImage = UIImage(named: "nyc.jpg")
-        case 1: headerImage = UIImage(named: "chicago.jpg")
-        case 2: headerImage = UIImage(named: "oakland.jpg")
-        default: headerImage = UIImage(named: "nyc.jpg")
-        }
-        
-        header.backgroundImageView.image = headerImage
+        header.backgroundImageView.image = headerImages[indexPath.section]
         
         let location = locations[indexPath.section]
         header.textLabel.text = "\(location.locality), \(location.region)"

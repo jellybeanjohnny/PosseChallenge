@@ -22,6 +22,11 @@
 		C9D8ABA71E9C1BD7002577F1 /* LemonMilk.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABA61E9C1BD7002577F1 /* LemonMilk.otf */; };
 		C9D8ABAA1E9C1DE4002577F1 /* oakland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABA81E9C1DE4002577F1 /* oakland.jpg */; };
 		C9D8ABAB1E9C1DE4002577F1 /* chicago.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABA91E9C1DE4002577F1 /* chicago.jpg */; };
+		C9D8ABAD1E9C2742002577F1 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8ABAC1E9C2742002577F1 /* UIColor+Hex.swift */; };
+		C9D8ABB11E9C2D9F002577F1 /* android.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABAE1E9C2D9F002577F1 /* android.png */; };
+		C9D8ABB21E9C2D9F002577F1 /* iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABAF1E9C2D9F002577F1 /* iOS.png */; };
+		C9D8ABB31E9C2D9F002577F1 /* ruby.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D8ABB01E9C2D9F002577F1 /* ruby.png */; };
+		C9D8ABB61E9C3974002577F1 /* String+PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8ABB51E9C3974002577F1 /* String+PhoneNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		C9D8ABA61E9C1BD7002577F1 /* LemonMilk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilk.otf; sourceTree = "<group>"; };
 		C9D8ABA81E9C1DE4002577F1 /* oakland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oakland.jpg; sourceTree = "<group>"; };
 		C9D8ABA91E9C1DE4002577F1 /* chicago.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicago.jpg; sourceTree = "<group>"; };
+		C9D8ABAC1E9C2742002577F1 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		C9D8ABAE1E9C2D9F002577F1 /* android.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = android.png; sourceTree = "<group>"; };
+		C9D8ABAF1E9C2D9F002577F1 /* iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS.png; sourceTree = "<group>"; };
+		C9D8ABB01E9C2D9F002577F1 /* ruby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ruby.png; sourceTree = "<group>"; };
+		C9D8ABB51E9C3974002577F1 /* String+PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PhoneNumber.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +97,12 @@
 		C931AD881E9BDA60009F5C8B /* Posse */ = {
 			isa = PBXGroup;
 			children = (
+				C931AD891E9BDA60009F5C8B /* AppDelegate.swift */,
+				C9D8ABB41E9C3816002577F1 /* Extensions */,
 				C9D8AB971E9BF657002577F1 /* ViewController */,
 				C931ADA41E9BDDF0009F5C8B /* Supporting Files */,
 				C931AD9B1E9BDBF2009F5C8B /* Models */,
 				C9D8AB961E9BE945002577F1 /* Data Store */,
-				C931AD891E9BDA60009F5C8B /* AppDelegate.swift */,
 				C931AD901E9BDA60009F5C8B /* Assets.xcassets */,
 			);
 			path = Posse;
@@ -139,6 +150,9 @@
 		C9D8ABA21E9C1BAF002577F1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C9D8ABAE1E9C2D9F002577F1 /* android.png */,
+				C9D8ABAF1E9C2D9F002577F1 /* iOS.png */,
+				C9D8ABB01E9C2D9F002577F1 /* ruby.png */,
 				C9D8ABA81E9C1DE4002577F1 /* oakland.jpg */,
 				C9D8ABA91E9C1DE4002577F1 /* chicago.jpg */,
 				C9D8ABA01E9C190A002577F1 /* nyc.jpg */,
@@ -152,6 +166,15 @@
 				C9D8ABA61E9C1BD7002577F1 /* LemonMilk.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		C9D8ABB41E9C3816002577F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9D8ABAC1E9C2742002577F1 /* UIColor+Hex.swift */,
+				C9D8ABB51E9C3974002577F1 /* String+PhoneNumber.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		D1CCFFB51AA4539013CC8E58 /* Pods */ = {
@@ -228,8 +251,11 @@
 			files = (
 				C9D8ABA11E9C190A002577F1 /* nyc.jpg in Resources */,
 				C931ADA61E9BDE03009F5C8B /* posse_challenge.json in Resources */,
+				C9D8ABB31E9C2D9F002577F1 /* ruby.png in Resources */,
 				C9D8ABA71E9C1BD7002577F1 /* LemonMilk.otf in Resources */,
+				C9D8ABB11E9C2D9F002577F1 /* android.png in Resources */,
 				C931AD911E9BDA60009F5C8B /* Assets.xcassets in Resources */,
+				C9D8ABB21E9C2D9F002577F1 /* iOS.png in Resources */,
 				C9D8ABAB1E9C1DE4002577F1 /* chicago.jpg in Resources */,
 				C9D8ABAA1E9C1DE4002577F1 /* oakland.jpg in Resources */,
 			);
@@ -293,10 +319,12 @@
 				C931ADA31E9BDD44009F5C8B /* Store.swift in Sources */,
 				C9D8AB991E9BF67F002577F1 /* DisplayViewController.swift in Sources */,
 				C9D8AB9D1E9C02B9002577F1 /* LocationCollectionReusableView.swift in Sources */,
+				C9D8ABAD1E9C2742002577F1 /* UIColor+Hex.swift in Sources */,
 				C9D8AB9B1E9BFC29002577F1 /* JSONParser.swift in Sources */,
 				C9D8AB9F1E9C0520002577F1 /* ProgrammerCollectionViewCell.swift in Sources */,
 				C931AD9D1E9BDC0B009F5C8B /* Progammer.swift in Sources */,
 				C931AD8A1E9BDA60009F5C8B /* AppDelegate.swift in Sources */,
+				C9D8ABB61E9C3974002577F1 /* String+PhoneNumber.swift in Sources */,
 				C931ADA11E9BDC83009F5C8B /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
